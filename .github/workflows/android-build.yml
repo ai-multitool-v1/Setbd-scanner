@@ -50,11 +50,13 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          (gh release create v1.0-latest \
-              app/build/outputs/apk/debug/app-debug.apk \
-              app/build/outputs/apk/release/app-release.apk \
+          APK_D=app/build/outputs/apk/debug/app-debug.apk
+          APK_R=app/build/outputs/apk/release/app-release.apk
+          if gh release view v1.0-latest --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload v1.0-latest "$APK_D" "$APK_R" --clobber --repo "$GITHUB_REPOSITORY"
+          else
+            gh release create v1.0-latest "$APK_D" "$APK_R" \
+              --repo "$GITHUB_REPOSITORY" \
               --title "SETBD Scanner v1.0" \
-              --notes "Automated CI build. Install app-debug.apk directly; app-release.apk is debug-signed for convenience." \
-              --clobber) || (gh release upload v1.0-latest \
-              app/build/outputs/apk/debug/app-debug.apk \
-              app/build/outputs/apk/release/app-release.apk --clobber)
+              --notes "Automated CI build. Install app-debug.apk directly; app-release.apk is debug-signed for convenience."
+          fi
