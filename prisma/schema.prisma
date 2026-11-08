@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model ScrapeJob {
+  id          String    @id @default(cuid())
+  url         String
+  title       String?
+  status      String    @default("running") // running | completed | failed
+  stage       String    @default("fetching") // fetching | mapping | downloading | optimizing | done
+  progress    Int       @default(0)
+  message     String?
+  fileCount   Int       @default(0)
+  totalSize   Int       @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  completedAt DateTime?
+}
