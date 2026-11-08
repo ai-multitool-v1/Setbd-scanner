@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New target / project"
+            android:textColor="@color/textMain"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/dName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"
+            android:hint="Project name (e.g. Client X main site)"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/textMain"
+            android:textColorHint="@color/textSub"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/dUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_input"
+            android:hint="https://target.example.com"
+            android:inputType="textUri"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/textMain"
+            android:textColorHint="@color/textSub"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/dDomains"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_input"
+            android:hint="Allowed domains (comma separated)"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/textMain"
+            android:textColorHint="@color/textSub"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/dExcluded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_input"
+            android:hint="Excluded paths (/admin, /logout)"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/textMain"
+            android:textColorHint="@color/textSub"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/dNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_input"
+            android:hint="Notes"
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:padding="12dp"
+            android:textColor="@color/textMain"
+            android:textColorHint="@color/textSub"
+            android:textSize="13sp" />
+
+        <CheckBox
+            android:id="@+id/dAuth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="I have written authorization for this target"
+            android:textColor="@color/textMain"
+            android:textSize="13sp" />
+    </LinearLayout>
+</ScrollView>

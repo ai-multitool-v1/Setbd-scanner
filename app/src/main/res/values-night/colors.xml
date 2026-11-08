@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark palette: deep navy, charcoal, cyan accents -->
+    <color name="bg">#0A1120</color>
+    <color name="surface">#101A2E</color>
+    <color name="card">#13203A</color>
+    <color name="cardAlt">#0F1930</color>
+    <color name="textMain">#E6F1FF</color>
+    <color name="textSub">#8FA3BF</color>
+    <color name="accent">#22D3EE</color>
+    <color name="accentSoft">#123A4D</color>
+    <color name="onAccent">#05242B</color>
+    <color name="chip">#173049</color>
+    <color name="divider">#1E2A44</color>
+    <color name="danger">#F87171</color>
+    <color name="warn">#FBBF24</color>
+    <color name="ok">#34D399</color>
+    <color name="low">#60A5FA</color>
+    <color name="navBg">#0D1526</color>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light palette: pure white, ice blue, subtle cyan -->
+    <color name="bg">#F4F9FE</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="card">#FFFFFF</color>
+    <color name="cardAlt">#F0F7FD</color>
+    <color name="textMain">#0F1B2D</color>
+    <color name="textSub">#5A6B7F</color>
+    <color name="accent">#0891B2</color>
+    <color name="accentSoft">#CFF4FB</color>
+    <color name="onAccent">#FFFFFF</color>
+    <color name="chip">#E3F1FA</color>
+    <color name="divider">#E3EAF2</color>
+    <color name="danger">#DC2626</color>
+    <color name="warn">#D97706</color>
+    <color name="ok">#059669</color>
+    <color name="low">#2563EB</color>
+    <color name="navBg">#F8FBFE</color>
+</resources>

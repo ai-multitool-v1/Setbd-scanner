@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Setbd" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorOnPrimary">@color/onAccent</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/textMain</item>
+        <item name="colorOnSurfaceVariant">@color/textSub</item>
+        <item name="android:colorBackground">@color/bg</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/navBg</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="bottomNavigationStyle">@style/Widget.Setbd.BottomNav</item>
+    </style>
+
+    <style name="Widget.Setbd.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@color/navBg</item>
+        <item name="itemIconTint">@color/nav_item</item>
+        <item name="itemTextColor">@color/nav_item</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <style name="TextAppearance.Setbd.Brand" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.04</item>
+        <item name="android:textColor">@color/textMain</item>
+    </style>
+
+    <style name="TextAppearance.Setbd.Section" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/textMain</item>
+    </style>
+
+    <style name="Widget.Setbd.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/card</item>
+        <item name="cardCornerRadius">22dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="contentPadding">16dp</item>
+    </style>
+
+    <style name="Widget.Setbd.Button" parent="Widget.Material3.Button">
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">16dp</item>
+    </style>
+
+    <style name="Widget.Setbd.Button.Outline" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">16dp</item>
+    </style>
+
+    <style name="Widget.Setbd.Chip" parent="Widget.Material3.Chip.Assist">
+        <item name="chipBackgroundColor">@color/chip</item>
+        <item name="android:textColor">@color/textMain</item>
+        <item name="chipStrokeWidth">0dp</item>
+    </style>
+</resources>
