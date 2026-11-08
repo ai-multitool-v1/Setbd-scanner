@@ -129,6 +129,7 @@ export function SplashScreen({ onFinish }: SplashScreenProps) {
             alt=""
             width={128}
             height={64}
+            style={{ width: "auto" }}
             className="h-16 w-auto rounded-lg"
           />
         </motion.div>

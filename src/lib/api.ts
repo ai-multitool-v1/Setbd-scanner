@@ -11,13 +11,14 @@ async function json<T>(res: Response): Promise<T> {
 
 /** Start scraping a website */
 export async function startScrape(url: string): Promise<ScrapeJob> {
-  return json(
+  const data = await json<{ job: ScrapeJob }>(
     await fetch("/api/scrape", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ url }),
     })
   );
+  return data.job;
 }
 
 /** List all scrape jobs (newest first) */

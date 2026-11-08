@@ -69,6 +69,7 @@ export function JobsSection({
             alt=""
             width={160}
             height={100}
+            style={{ width: "auto" }}
             className="h-24 w-auto opacity-90"
           />
           <p className="text-sm text-muted-foreground">

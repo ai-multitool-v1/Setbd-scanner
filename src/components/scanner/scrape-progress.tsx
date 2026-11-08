@@ -106,6 +106,7 @@ export function ScrapeProgress({ job, onOpenEditor, onDownloadZip, onRetry }: Sc
               alt=""
               width={64}
               height={64}
+              style={{ width: "auto" }}
               className="hidden h-14 w-auto rounded-lg opacity-80 sm:block"
             />
           )}
@@ -143,7 +144,7 @@ export function ScrapeProgress({ job, onOpenEditor, onDownloadZip, onRetry }: Sc
                 )}
                 <span
                   className={cn(
-                    "max-w-[72px] truncate text-center text-[10px] leading-tight sm:text-[11px]",
+                    "hidden max-w-[72px] truncate text-center text-[10px] leading-tight min-[420px]:block sm:text-[11px]",
                     done && "text-primary",
                     current && "text-foreground",
                     upcoming && "text-muted-foreground/60"

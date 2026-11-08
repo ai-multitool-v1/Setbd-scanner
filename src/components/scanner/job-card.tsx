@@ -47,6 +47,17 @@ export interface JobCardProps {
   onDelete: (jobId: string) => void | Promise<void>;
 }
 
+/** Never crash the tree on a malformed date. */
+function relativeTime(iso: string): string {
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return "";
+  try {
+    return formatDistanceToNow(date, { addSuffix: true });
+  } catch {
+    return "";
+  }
+}
+
 export function JobCard({ job, index = 0, onOpenEditor, onDownloadZip, onDelete }: JobCardProps) {
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [previewOpen, setPreviewOpen] = useState(false);
@@ -114,7 +125,7 @@ export function JobCard({ job, index = 0, onOpenEditor, onDownloadZip, onDelete 
             <span className="inline-flex items-center gap-1">
               <Clock3 className="size-3.5" aria-hidden />
               <span suppressHydrationWarning>
-                {formatDistanceToNow(new Date(job.createdAt), { addSuffix: true })}
+                {relativeTime(job.createdAt)}
               </span>
             </span>
             <span className="inline-flex items-center gap-1">
